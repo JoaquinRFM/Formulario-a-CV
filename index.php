@@ -321,6 +321,10 @@
             </fieldset>
         </div>
 
+        <div class="input-box">
+            <input type="text" name="perfil" placeholder="Informacion de perfil">
+        </div>
+
         <input class="btn" type="submit" name="register" value="Enviar">
 
     </form>
