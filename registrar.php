@@ -12,7 +12,9 @@ if (isset($_POST['register'])) {
         strlen($_POST['level']) >= 1 &&
         strlen($_POST['lenguages']) >= 1 &&
         strlen($_POST['aptitudes']) >= 1 &&
-        strlen($_POST['skills']) >= 1
+        strlen($_POST['skills']) >= 1 &&
+        strlen($_POST['perfil']) >= 1
+
         ) {
             $name = trim($_POST['name']);
             $birth = trim($_POST['birth']);
@@ -24,9 +26,10 @@ if (isset($_POST['register'])) {
             $lenguages = trim($_POST['lenguages']);
             $aptitudes = trim($_POST['aptitudes']);
             $skills = trim($_POST['skills']);
+            $perfil = trim($_POST['perfil']);
             $fecha = date("d/m/y");
-            $consulta = "INSERT INTO datos(nombre, birth, ocupation, phone, email, country, level,  lenguages, aptitudes, skills, fecha)
-                VALUES('$name', '$birth', '$ocupation', '$phone', '$email', '$country', '$level', '$lenguages', '$aptitudes', '$skills', '$fecha')";
+            $consulta = "INSERT INTO datos(nombre, birth, ocupation, phone, email, country, level,  lenguages, aptitudes, skills, perfil, fecha)
+                VALUES('$name', '$birth', '$ocupation', '$phone', '$email', '$country', '$level', '$lenguages', '$aptitudes', '$skills', '$perfil', '$fecha')";
             $resultado = mysqli_query($conex, $consulta); 
             if ($resultado) {
                 ?>
